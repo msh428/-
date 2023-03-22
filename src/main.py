@@ -44,7 +44,7 @@ class LunchRecommendation(QWidget):
         diet = ['토마토 달걀볶음', '바나나쉐이크', '두부스테이크', '곤약국수', '해독주스', '단호박스프', '닭가슴살샐러드', '리코타치즈', '양배추스프']
         speedy = ['오믈렛', '연어덮밥', '치킨마요덮밥', '김치볶음밥', '계란찜', '떡국', '만둣국', '오차즈케', '누룽지죽']
         brunch = ['팬케이크', '프리타타', '몬테크리스토', '샐러드파스타', '크로크무슈/마담', '불고기부리또', '에그베네딕트', '조개스프', '프렌치토스트']
-        menu_by_condition = [customer + after_drink + lunch_box + nutrition + diet + speedy + brunch]
+        menu_by_condition = customer + after_drink + lunch_box + nutrition + diet + speedy + brunch
 
 
         potato_onion = ['감자채볶음', '감자고추장찌개', '감자조림', '야채죽', '감잣국', '포테이토피자', '감자스프', '으깬감자샐러드', '감자/양파튀김']
@@ -55,7 +55,7 @@ class LunchRecommendation(QWidget):
         cold_rice = ['누룽지', '볶음밥', '주먹밥', '김치밥 말아먹기', '밥전', '각종죽', '리소토', '크로켓', '주먹밥']
         vegetable = ['볶음밥', '프리타타', '비빔밥', '채소전', '야채볶음', '잡채', '소시지야채볶음', '그라탕', '볶음우동']
         egg = ['계란찜', '계란말이', '오믈렛', '감동란', '계란빵', '계란장조림', '스카치에그', '계란푸딩', '스티프드에그']
-        menu_by_ingredient = [potato_onion + tuna + pork + lamen + chick + cold_rice + vegetable + egg]
+        menu_by_ingredient = potato_onion + tuna + pork + lamen + chick + cold_rice + vegetable + egg
 
         japan = ['규동', '우동', '미소시루', '찜닭', '감츠동', '오니기리', '하이 라이스', '라멘', '오코노미야끼']
         china = ['깐풍기', '볶음면', '동파육', '짜장면', '짬뽕', '마파두부', '탕수육', '토마토 달걀볶음', '고추잡채']
@@ -65,7 +65,7 @@ class LunchRecommendation(QWidget):
         france = ['부야베스', '라타투이', '뵈프 부르기뇽', '끼슈', '마카롱', '코코뱅', '프렌치 토스트', '크로크 무슈/마담', '뱅쇼']
         america = ['각종 햄버거', '각종 핫도그', '바비큐', '후라이드 치킨', '클램 차우더', '잠발라야', '미트로프', '맥앤치즈', '에그 베네딕트']
         middle_east_asia = ['케밥', '삭슈카(에그인쉘)', '허머스(후무스)', '팔라펠', '페투쉬', '필라프', '무사카', '피타', '쿠스쿠스(중동식파스타)']
-        menu_by_country = [japan + china + korea + italy + east_south_asia + france + america + middle_east_asia]
+        menu_by_country = japan + china + korea + italy + east_south_asia + france + america + middle_east_asia
 
 
         menu_by_category = []
