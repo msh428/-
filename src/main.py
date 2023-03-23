@@ -2,7 +2,7 @@ import os
 import sys
 import random
 import subprocess
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QCheckBox
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton
 
 class LunchRecommendation(QWidget):
     def __init__(self):
@@ -13,7 +13,7 @@ class LunchRecommendation(QWidget):
     def initUI(self):
         # 윈도우 크기와 제목 설정
         self.setGeometry(100, 100, 300, 200)
-        self.setWindowTitle('점심 추천 프로그램')
+        self.setWindowTitle('점심 추천 v0.0.1')
 
         # 레이블 생성
         self.label = QLabel('오늘 점심은 뭘 먹을까요?', self)
@@ -57,14 +57,14 @@ class LunchRecommendation(QWidget):
         egg = ['계란찜', '계란말이', '오믈렛', '감동란', '계란빵', '계란장조림', '스카치에그', '계란푸딩', '스티프드에그']
         menu_by_ingredient = potato_onion + tuna + pork + lamen + chick + cold_rice + vegetable + egg
 
-        japan = ['규동', '우동', '미소시루', '찜닭', '감츠동', '오니기리', '하이 라이스', '라멘', '오코노미야끼']
+        japan = [] # ['규동', '우동', '미소시루', '찜닭', '감츠동', '오니기리', '하이 라이스', '라멘', '오코노미야끼']
         china = ['깐풍기', '볶음면', '동파육', '짜장면', '짬뽕', '마파두부', '탕수육', '토마토 달걀볶음', '고추잡채']
         korea = ['해물파전', '김치', '쌈밥', '된장찌개', '비빔밥', '칼국수', '불고기', '떡볶이', '제육볶음']
-        italy = ['라자냐', '그라탕', '나폴리 피자', '각종 스파게티', '노끼', '페투치니 알프레도', '리소토', '프리타타', '파니니']
-        east_south_asia = ['팟타이', '카오팟', '나시고랭', '파인애플 볶음밥', '쌀국수', '반미(바게트샌드위치)', '연유라떼', '짜조', '분짜']
-        france = ['부야베스', '라타투이', '뵈프 부르기뇽', '끼슈', '마카롱', '코코뱅', '프렌치 토스트', '크로크 무슈/마담', '뱅쇼']
-        america = ['각종 햄버거', '각종 핫도그', '바비큐', '후라이드 치킨', '클램 차우더', '잠발라야', '미트로프', '맥앤치즈', '에그 베네딕트']
-        middle_east_asia = ['케밥', '삭슈카(에그인쉘)', '허머스(후무스)', '팔라펠', '페투쉬', '필라프', '무사카', '피타', '쿠스쿠스(중동식파스타)']
+        italy = [] # ['라자냐', '그라탕', '나폴리 피자', '각종 스파게티', '노끼', '페투치니 알프레도', '리소토', '프리타타', '파니니']
+        east_south_asia = [] # ['팟타이', '카오팟', '나시고랭', '파인애플 볶음밥', '쌀국수', '반미(바게트샌드위치)', '연유라떼', '짜조', '분짜']
+        france = [] # ['부야베스', '라타투이', '뵈프 부르기뇽', '끼슈', '마카롱', '코코뱅', '프렌치 토스트', '크로크 무슈/마담', '뱅쇼']
+        america = [] # ['각종 햄버거', '각종 핫도그', '바비큐', '후라이드 치킨', '클램 차우더', '잠발라야', '미트로프', '맥앤치즈', '에그 베네딕트']
+        middle_east_asia = [] # ['케밥', '삭슈카(에그인쉘)', '허머스(후무스)', '팔라펠', '페투쉬', '필라프', '무사카', '피타', '쿠스쿠스(중동식파스타)']
         menu_by_country = japan + china + korea + italy + east_south_asia + france + america + middle_east_asia
 
 
@@ -87,7 +87,7 @@ class LunchRecommendation(QWidget):
                 os.chdir('lunch-recommendation')
                 subprocess.run(['git', 'pull'])
         except Exception as e:
-            print(f'GitHub 업데이트 실패: {e}')
+            print('프로그램 업데이트에 실패했습니다. 기존 버전을 사용합니다')
 
 
 if __name__ == '__main__':
